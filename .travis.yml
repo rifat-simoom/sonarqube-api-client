@@ -1,0 +1,23 @@
+language: php
+php:
+  - '8.3'
+
+# Commands to be run before your environment runs.
+before_script:
+  - composer self-update
+  - composer install --no-interaction --dev
+  - echo $SONAR_PHPUNIT_TOKEN > .env
+
+# Commands you want to run that will verify your build.
+jobs:
+  include:
+    - stage: "Sonarcloud"
+      name: "PHP Unit testing and sonar analysis"
+      script:
+        - phpunit
+        - sonar-scanner
+
+# Load sonarcloud addon
+addons:
+  sonarcloud:
+    organization: "forgeqc"
