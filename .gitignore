@@ -1,1 +1,7 @@
-!
+cache/
+log/
+vendor/
+.phpunit.result.cache
+.env
+**/.idea
+**.log
