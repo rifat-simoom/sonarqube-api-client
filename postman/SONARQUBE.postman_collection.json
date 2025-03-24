@@ -1,0 +1,697 @@
+{
+	"info": {
+		"_postman_id": "f6c0c9be-9d9e-43f6-9eca-460cc5c014cb",
+		"name": "SONARQUBE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16532675",
+		"_collection_link": "https://restless-meadow-686971.postman.co/workspace/Rifat-Simoom-Rient~57e6ad39-d588-4462-baef-52e7d4587d71/collection/16532675-f6c0c9be-9d9e-43f6-9eca-460cc5c014cb?action=share&source=collection_link&creator=16532675"
+	},
+	"item": [
+		{
+			"name": "Hotspots",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?p=1&ps=500&project=pf",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "p",
+									"value": "1"
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "auth",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authentication",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ruleKey=php:S26129999999&ps=500&project=pf&sonarsourceSecurity=auth",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999"
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "auth"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ps=500&project=pf&sonarsourceSecurity=permission",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999",
+									"disabled": true
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "permission"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Csrf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ruleKey=php:S26129999999&ps=500&project=pf&sonarsourceSecurity=csrf",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999"
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "csrf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Code Injection (RCE)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ruleKey=java:S1313&ps=500&projectKey=pf&sonarsourceSecurity=rce",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "ruleKey",
+									"value": "java:S1313"
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "projectKey",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "rce"
+								},
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Command Injection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ruleKey=php:S26129999999&ps=500&project=pf&sonarsourceSecurity=command-injection",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999"
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "command-injection"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weak Cryptography",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ps=500&project=pf&sonarsourceSecurity=weak-cryptography",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999",
+									"disabled": true
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "weak-cryptography"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encrypt Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ps=500&project=pf&sonarsourceSecurity=encrypt-data",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999",
+									"disabled": true
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "encrypt-data"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insecure Conf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ps=500&project=pf&sonarsourceSecurity=insecure-conf",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999",
+									"disabled": true
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "insecure-conf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Others",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sonarqube_base_url}}/api/hotspots/search?ps=500&project=pf&sonarsourceSecurity=others",
+							"host": [
+								"{{sonarqube_base_url}}"
+							],
+							"path": [
+								"api",
+								"hotspots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "componentKeys",
+									"value": "pf",
+									"disabled": true
+								},
+								{
+									"key": "ruleKey",
+									"value": "php:S26129999999",
+									"disabled": true
+								},
+								{
+									"key": "ps",
+									"value": "500"
+								},
+								{
+									"key": "project",
+									"value": "pf"
+								},
+								{
+									"key": "status",
+									"value": "TO_REVIEW",
+									"disabled": true
+								},
+								{
+									"key": "sonarsourceSecurity",
+									"value": "others"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"const responseData = pm.response.json();",
+							"",
+							"const categorizedHotspots = {};",
+							"",
+							"responseData.hotspots.forEach(hotspot => {",
+							"    const ruleKey = hotspot.ruleKey;",
+							"    const message = hotspot.message;",
+							"",
+							"    if (!categorizedHotspots[ruleKey]) {",
+							"        categorizedHotspots[ruleKey] = {",
+							"            message : hotspot.message,",
+							"            hotspots: [],",
+							"            files: new Set()",
+							"        };",
+							"    }",
+							"",
+							"    categorizedHotspots[ruleKey].hotspots.push(hotspot);",
+							"    if (hotspot.component) {",
+							"        categorizedHotspots[ruleKey].files.add(hotspot.component);",
+							"    }",
+							"});",
+							"",
+							"Object.keys(categorizedHotspots).forEach(ruleKey => {",
+							"    categorizedHotspots[ruleKey].files = Array.from(categorizedHotspots[ruleKey].files);",
+							"});",
+							"",
+							"pm.collectionVariables.set(\"categorized_hotspots\", JSON.stringify(categorizedHotspots));",
+							"",
+							"Object.keys(categorizedHotspots).forEach(ruleKey => {",
+							"    const category = categorizedHotspots[ruleKey];",
+							"    const message = category.message;",
+							"    const occurrenceCount = category.hotspots.length;",
+							"    const fileList = category.files.join('; ');",
+							"",
+							"    pm.test(ruleKey + \"|\" + message, () => {",
+							"        pm.expect(occurrenceCount, `${occurrenceCount} occurrences found in '${ruleKey}\\n'. Affected files: ${fileList}`).to.equal(0);",
+							"    });",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{sonarqube_base_url}}/api/projects/search",
+					"host": [
+						"{{sonarqube_base_url}}"
+					],
+					"path": [
+						"api",
+						"projects",
+						"search"
+					],
+					"query": [
+						{
+							"key": "incluce_provider_response",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Issues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{sonarqube_base_url}}/api/issues/search?componentKeys=pf&rules=javascript:S2245&ps=500",
+					"host": [
+						"{{sonarqube_base_url}}"
+					],
+					"path": [
+						"api",
+						"issues",
+						"search"
+					],
+					"query": [
+						{
+							"key": "componentKeys",
+							"value": "pf"
+						},
+						{
+							"key": "rules",
+							"value": "javascript:S2245"
+						},
+						{
+							"key": "ps",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Measures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{sonarqube_base_url}}/api/measures/component?component=pf&metricKeys=bugs,vulnerabilities,coverage",
+					"host": [
+						"{{sonarqube_base_url}}"
+					],
+					"path": [
+						"api",
+						"measures",
+						"component"
+					],
+					"query": [
+						{
+							"key": "component",
+							"value": "pf"
+						},
+						{
+							"key": "metricKeys",
+							"value": "bugs,vulnerabilities,coverage"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{sonarqube_user_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "categorized_hotspots",
+			"value": ""
+		},
+		{
+			"key": "sonarqube_base_url",
+			"value": "http://localhost:9000",
+			"type": "string"
+		},
+		{
+			"key": "sonarqube_user_token",
+			"value": "squ_cce5da16061602289b31f083eac8329936b78e5b",
+			"type": "string"
+		}
+	]
+}
